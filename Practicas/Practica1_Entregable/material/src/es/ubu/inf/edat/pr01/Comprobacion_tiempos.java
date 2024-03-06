@@ -76,7 +76,7 @@ public class Comprobacion_tiempos<T> {
         comprobacion.comprobarTiempos(10);
         comprobacion.comprobarTiempos(100);
         comprobacion.comprobarTiempos(1000);
-        comprobacion.comprobarTiempos(10000);
+        comprobacion.comprobarTiempos(2000);
 
     }
 }

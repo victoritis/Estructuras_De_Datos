@@ -9,6 +9,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import es.ubu.lsi.edat.pr01.SubArrayComunMasLargo;
+/*
+ * IMPORTANTE, SEGURAMENTE PARA EJECUTAR CORRECTAMENTE HAGA FALTA CAMBIAR lsi POR inf
+ * YA QUE YO LO HE CAMBIADO POR CUESTIONES DE CONFIGURACION
+ * */
 
 /**
  * @author prenedo
