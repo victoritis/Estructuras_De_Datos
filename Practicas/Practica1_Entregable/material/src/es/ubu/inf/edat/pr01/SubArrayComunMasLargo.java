@@ -1,4 +1,8 @@
 package es.ubu.lsi.edat.pr01;
+/*
+* IMPORTANTE, SEGURAMENTE PARA EJECUTAR CORRECTAMENTE HAGA FALTA CAMBIAR lsi POR inf
+* YA QUE YO LO HE CAMBIADO POR CUESTIONES DE CONFIGURACION
+* */
 
 
 import java.util.ArrayList;
@@ -13,6 +17,14 @@ public class SubArrayComunMasLargo<T> {
 		this.secuencia2 = secuencia2;
 	}
 
+
+	/**
+	 * Encuentra el subarray común más largo entre dos secuencias de elementos de manera iterativa.
+	 *
+	 * @author Victor Gonzalez Del Campo
+	 *
+	 * @return el subarray común más largo encontrado entre las dos secuencias
+	 */
 	public List<T> metodoIterativo() {
 		List<T> R = new ArrayList<>();
 		int maxLongitud = 0;
@@ -37,6 +49,13 @@ public class SubArrayComunMasLargo<T> {
 		return R;
 	}
 
+	/**
+	 * Encuentra el subarray común más largo entre dos secuencias de elementos utilizando programación dinámica.
+	 *
+	 * @author Victor Gonzalez Del Campo
+	 *
+	 * @return el subarray común más largo encontrado entre las dos secuencias
+	 */
 	public List<T> metodoProgDinamica() {
 		List<T> resultado = new ArrayList<>();
 		int n = secuencia1.size();

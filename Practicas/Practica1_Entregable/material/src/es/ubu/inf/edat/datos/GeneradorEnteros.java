@@ -1,4 +1,8 @@
 package es.ubu.lsi.edat.datos;
+/*
+ * IMPORTANTE, SEGURAMENTE PARA EJECUTAR CORRECTAMENTE HAGA FALTA CAMBIAR lsi POR inf
+ * YA QUE YO LO HE CAMBIADO POR CUESTIONES DE CONFIGURACION
+ * */
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -33,12 +33,26 @@ public class SubArrayComunMasLargoTest_Integer {
 		List<Integer> resultado = Arrays.asList(1, 2, 4, 5, 3, 4, 6, 7, 9, 4, 5, 33, 45, 63, 2, 4);
 
 		System.out.println("-- testComprobar método 1 --");
+
+		long startTime1 = System.currentTimeMillis(); // Tiempo de inicio
+
 		assertTrue(resultado.equals(gestor.metodoIterativo()));
+
+		long endTime1 = System.currentTimeMillis(); // Tiempo de inicio
+
+		System.out.println("Tiempo ejecucion : " + (endTime1-startTime1));
+
 
 		System.out.println("funcionando");
 
+		long startTime2 = System.currentTimeMillis(); // Tiempo de inicio
+
 		System.out.println("-- testComprobar método 2 --");
 		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+
+		long endTime2 = System.currentTimeMillis(); // Tiempo de inicio
+
+		System.out.println("Tiempo ejecucion : " + (endTime2-startTime2));
 
 		System.out.println("funcionando");
 
@@ -142,7 +156,11 @@ public class SubArrayComunMasLargoTest_Integer {
 		List<Integer> resultado = Arrays.asList(11, 12, 13, 14, 15, 16, 17);
 
 		System.out.println("-- testComprobar método 1 --");
+
+
 		assertTrue(resultado.equals(gestor.metodoIterativo()));
+
+
 
 		System.out.println("funcionando");
 
