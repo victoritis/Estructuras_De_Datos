@@ -16,6 +16,12 @@ public class SubArrayComunMasLargo<T> {
 		this.secuencia1 = secuencia1;
 		this.secuencia2 = secuencia2;
 	}
+	
+	public int getSecuencia1tamano(){
+
+		int size = secuencia1.size();
+		return size;
+	}
 
 
 	/**
@@ -80,4 +86,5 @@ public class SubArrayComunMasLargo<T> {
 		}
 		return resultado;
 	}
+	
 }

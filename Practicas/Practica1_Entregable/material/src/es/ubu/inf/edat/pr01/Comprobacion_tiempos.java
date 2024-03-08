@@ -29,11 +29,21 @@ public class Comprobacion_tiempos<T> {
         // Medir el tiempo de ejecución para el método de programación dinámica
         long tiempoProgDinamica = medirTiempoMetodoProgDinamica(sacml);
 
-        // Imprimir los tiempos medidos
-        System.out.println("Midiendo tiempo para un array de longitud : " + secuencia1.size());
-        System.out.println("Tiempo del método iterativo: " + tiempoIterativo + " nanosegundos");
-        System.out.println("Tiempo del método de programación dinámica: " + tiempoProgDinamica + " nanosegundos");
-        System.out.printf("\n\n");
+
+        if(sacml.getSecuencia1tamano()<60){
+            // Imprimir los tiempos medidos
+            System.out.println("Midiendo tiempo para un array de longitud : " + secuencia1.size());
+            System.out.println("Tiempo del método iterativo: " + tiempoIterativo + " microsegundos");
+            System.out.println("Tiempo del método de programación dinámica: " + tiempoProgDinamica + " microsegundos");
+            System.out.printf("\n\n");
+
+        } else {
+            // Imprimir los tiempos medidos
+            System.out.println("Midiendo tiempo para un array de longitud : " + secuencia1.size());
+            System.out.println("Tiempo del método iterativo: " + tiempoIterativo + " milisegundos");
+            System.out.println("Tiempo del método de programación dinámica: " + tiempoProgDinamica + " milisegundos");
+            System.out.printf("\n\n");
+        }
     }
 
     private List<T> inicializarListaAleatoria(int tamano) {
@@ -51,22 +61,45 @@ public class Comprobacion_tiempos<T> {
     }
 
     private long medirTiempoMetodoIterativo(SubArrayComunMasLargo<T> sacml) {
-        long startTime1 = System.currentTimeMillis(); // Tiempo de inicio
+        if(sacml.getSecuencia1tamano()<60){
+            long startTime1 = System.nanoTime(); // Tiempo de inicio con nanosegundos
 
-        sacml.metodoIterativo(); // Llamar al método iterativo
+            sacml.metodoProgDinamica(); // Llamar al método de programación dinámica
 
-        long endTime1 = System.currentTimeMillis(); // Tiempo de finalización
-        return endTime1 - startTime1; // Devolver el tiempo transcurrido en nanosegundos
+            long endTime1 = System.nanoTime(); // Tiempo de finalización con nanosegundos
+            long elapsedTime = endTime1 - startTime1;
+            return elapsedTime/1000;
+
+        } else {
+            long startTime1 = System.currentTimeMillis(); // Tiempo de inicio
+
+            sacml.metodoIterativo(); // Llamar al método iterativo
+
+            long endTime1 = System.currentTimeMillis(); // Tiempo de finalización
+            return endTime1 - startTime1; // Devolver el tiempo transcurrido en nanosegundos
+        }
+
     }
 
     private long medirTiempoMetodoProgDinamica(SubArrayComunMasLargo<T> sacml) {
-        long startTime2 = System.currentTimeMillis(); // Tiempo de inicio
 
-        sacml.metodoProgDinamica(); // Llamar al método de programación dinámica
+        if(sacml.getSecuencia1tamano()<60){
+            long startTime1 = System.nanoTime(); // Tiempo de inicio con nanosegundos
 
-        long endTime2 = System.currentTimeMillis(); // Tiempo de finalización
-        return endTime2 - startTime2; // Devolver el tiempo transcurrido en nanosegundos
+            sacml.metodoProgDinamica(); // Llamar al método de programación dinámica
 
+            long endTime1 = System.nanoTime(); // Tiempo de finalización con nanosegundos
+            long elapsedTime = endTime1 - startTime1;
+            return elapsedTime/1000;
+
+        } else {
+            long startTime1 = System.currentTimeMillis(); // Tiempo de inicio
+
+            sacml.metodoProgDinamica(); // Llamar al método de programación dinámica
+
+            long endTime1 = System.currentTimeMillis(); // Tiempo de finalización
+            return endTime1 - startTime1; // Devolver el tiempo transcurrido en nanosegundos
+        }
 
     }
 
@@ -74,9 +107,13 @@ public class Comprobacion_tiempos<T> {
     public static void main(String[] args) {
         Comprobacion_tiempos<Integer> comprobacion = new Comprobacion_tiempos<>();
         comprobacion.comprobarTiempos(10);
+        comprobacion.comprobarTiempos(50);
         comprobacion.comprobarTiempos(100);
+        comprobacion.comprobarTiempos(300);
+        comprobacion.comprobarTiempos(600);
         comprobacion.comprobarTiempos(1000);
         comprobacion.comprobarTiempos(2000);
+        comprobacion.comprobarTiempos(3000);
 
     }
 }
