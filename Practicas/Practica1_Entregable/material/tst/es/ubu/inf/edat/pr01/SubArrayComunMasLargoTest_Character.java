@@ -45,9 +45,9 @@ public class SubArrayComunMasLargoTest_Character {
 				'i', 'o', ' ', 'd', 'e', 'l', ' ', 'f', 'a', 'm', 'o', 's', 'o', ' ', 'h', 'i', 'd', 'a', 'l', 'g',
 				'o');
 
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
+		assertEquals(resultado, gestor.metodoIterativo());
 		List<Character> temporal = gestor.metodoProgDinamica();
-		assertTrue(resultado.equals(temporal));
+		assertEquals(resultado, temporal);
 
 		System.out.println("funcionando");
 

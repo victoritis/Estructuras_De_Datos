@@ -5,18 +5,42 @@ package es.ubu.lsi.edat.pr01;
 * */
 
 
+/**
+ * @param <E> the type of elements in this list
+ * @see java.util.Vector
+ * @since 1.2
+ */
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Deque;
 
+
+
+/**
+ * The SubArrayComunMasLargo class represents a utility for finding the longest common subarray between two sequences of elements.
+ *
+ * @param <T> the type of elements in the sequences
+ */
 public class SubArrayComunMasLargo<T> {
 	List<T> secuencia1;
 	List<T> secuencia2;
 
+	/**
+	 * Constructs a new SubArrayComunMasLargo object with the given sequences.
+	 *
+	 * @param secuencia1 the first sequence
+	 * @param secuencia2 the second sequence
+	 */
 	public SubArrayComunMasLargo(List<T> secuencia1, List<T> secuencia2) {
 		this.secuencia1 = secuencia1;
 		this.secuencia2 = secuencia2;
 	}
 	
+	/**
+	 * Gets the size of the first sequence.
+	 *
+	 * @return the size of the first sequence
+	 */
 	public int getSecuencia1tamano(){
 
 		int size = secuencia1.size();
@@ -27,7 +51,7 @@ public class SubArrayComunMasLargo<T> {
 	/**
 	 * Encuentra el subarray común más largo entre dos secuencias de elementos de manera iterativa.
 	 *
-	 * @author Victor Gonzalez Del Campo
+	 * @author Victor Gonzalez Del Campo  ---- Juan Garcia lopez
 	 *
 	 * @return el subarray común más largo encontrado entre las dos secuencias
 	 */
@@ -58,9 +82,10 @@ public class SubArrayComunMasLargo<T> {
 	/**
 	 * Encuentra el subarray común más largo entre dos secuencias de elementos utilizando programación dinámica.
 	 *
-	 * @author Victor Gonzalez Del Campo
+	 * @author Victor Gonzalez Del Campo ---- Juan Garcia lopez
 	 *
 	 * @return el subarray común más largo encontrado entre las dos secuencias
+	 *
 	 */
 	public List<T> metodoProgDinamica() {
 		List<T> resultado = new ArrayList<>();

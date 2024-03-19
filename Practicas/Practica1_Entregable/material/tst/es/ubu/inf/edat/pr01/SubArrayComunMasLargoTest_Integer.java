@@ -40,7 +40,7 @@ public class SubArrayComunMasLargoTest_Integer {
 
 		long startTime1 = System.currentTimeMillis(); // Tiempo de inicio
 
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
+		assertEquals(resultado, gestor.metodoIterativo());
 
 		long endTime1 = System.currentTimeMillis(); // Tiempo de inicio
 
@@ -52,7 +52,7 @@ public class SubArrayComunMasLargoTest_Integer {
 		long startTime2 = System.currentTimeMillis(); // Tiempo de inicio
 
 		System.out.println("-- testComprobar método 2 --");
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoProgDinamica());
 
 		long endTime2 = System.currentTimeMillis(); // Tiempo de inicio
 
@@ -70,15 +70,15 @@ public class SubArrayComunMasLargoTest_Integer {
 
 		gestor = new SubArrayComunMasLargo<Integer>(arrayUno, arrayDos);
 
-		List<Integer> resultado = Arrays.asList();
+		List<Integer> resultado = List.of();
 
 		System.out.println("-- testComprobar método 1 --");
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
+		assertEquals(resultado, gestor.metodoIterativo());
 
 		System.out.println("funcionando");
 
 		System.out.println("-- testComprobar método 2 --");
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoProgDinamica());
 
 		System.out.println("funcionando");
 
@@ -92,15 +92,15 @@ public class SubArrayComunMasLargoTest_Integer {
 
 		gestor = new SubArrayComunMasLargo<Integer>(arrayUno, arrayDos);
 
-		List<Integer> resultado = Arrays.asList(1);
+		List<Integer> resultado = List.of(1);
 
 		System.out.println("-- testComprobar método 1 --");
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
+		assertEquals(resultado, gestor.metodoIterativo());
 
 		System.out.println("funcionando");
 
 		System.out.println("-- testComprobar método 2 --");
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoProgDinamica());
 
 		System.out.println("funcionando");
 
@@ -114,15 +114,15 @@ public class SubArrayComunMasLargoTest_Integer {
 
 		gestor = new SubArrayComunMasLargo<Integer>(arrayUno, arrayDos);
 
-		List<Integer> resultado = Arrays.asList(17);
+		List<Integer> resultado = List.of(17);
 
 		System.out.println("-- testComprobar método 1 --");
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
+		assertEquals(resultado, gestor.metodoIterativo());
 
 		System.out.println("funcionando");
 
 		System.out.println("-- testComprobar método 2 --");
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoProgDinamica());
 
 		System.out.println("funcionando");
 
@@ -132,21 +132,21 @@ public class SubArrayComunMasLargoTest_Integer {
 	public void iguales() {
 
 		List<Integer> arrayUno = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 17);
-		List<Integer> arrayVacio = Arrays.asList();
+		List<Integer> arrayVacio = List.of();
 
-		List<Integer> resultado = Arrays.asList();
+		List<Integer> resultado = List.of();
 
 		gestor = new SubArrayComunMasLargo<Integer>(arrayUno, arrayVacio);
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoIterativo());
+		assertEquals(resultado, gestor.metodoProgDinamica());
 
 		gestor = new SubArrayComunMasLargo<Integer>(arrayVacio, arrayUno);
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoIterativo());
+		assertEquals(resultado, gestor.metodoProgDinamica());
 
 		gestor = new SubArrayComunMasLargo<Integer>(arrayVacio, arrayVacio);
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoIterativo());
+		assertEquals(resultado, gestor.metodoProgDinamica());
 	}
 
 	@Test
@@ -162,14 +162,14 @@ public class SubArrayComunMasLargoTest_Integer {
 		System.out.println("-- testComprobar método 1 --");
 
 
-		assertTrue(resultado.equals(gestor.metodoIterativo()));
+		assertEquals(resultado, gestor.metodoIterativo());
 
 
 
 		System.out.println("funcionando");
 
 		System.out.println("-- testComprobar método 2 --");
-		assertTrue(resultado.equals(gestor.metodoProgDinamica()));
+		assertEquals(resultado, gestor.metodoProgDinamica());
 
 		System.out.println("funcionando");
 
