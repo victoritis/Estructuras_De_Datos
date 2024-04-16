@@ -15,6 +15,8 @@ import java.util.Random;
  * Los tiempos se miden para diferentes tamaños de listas de elementos aleatorios.
  *
  * @param <T> el tipo de elementos en las listas
+ *
+ * @author VICTOR GONZALEZ DEL CAMPO- JUAN GARCIA LOPEZ
  */
 public class Comprobacion_tiempos<T> {
 

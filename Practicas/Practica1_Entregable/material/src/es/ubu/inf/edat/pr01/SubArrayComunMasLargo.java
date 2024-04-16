@@ -20,6 +20,8 @@ import java.util.Deque;
  * The SubArrayComunMasLargo class represents a utility for finding the longest common subarray between two sequences of elements.
  *
  * @param <T> the type of elements in the sequences
+ *
+ * @author VICTOR GONZALEZ DEL CAMPO- JUAN GARCIA LOPEZ
  */
 public class SubArrayComunMasLargo<T> {
 	List<T> secuencia1;
