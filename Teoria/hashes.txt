@@ -1,0 +1,42 @@
+obj1.equeals(obj2) => obj1.hashCode = obj.hashCode()
+obj1.hashCode() always give same result
+Diferent objects could have same hashCode() result. i.e.
+
+
+public class Test{
+
+	private long field1;
+	private string field2;
+	private long noImportant;
+
+	@override
+	public boolean equals(final Object other){
+
+		if(other==this){
+			return true;
+		}	
+
+		if(other==null){
+
+			return false;
+		}
+		if(!this.gettype().equals(other.getType()){
+			return false;
+		}
+
+		if(field1==((test)other).field1){
+			return true;
+		}
+		if(field2.equeals((test)other).field2){
+			return true;	
+		}
+	return false
+	
+	}
+	@override
+	public int hasCode(){
+		return ((int)field1 * 19)^field1 * field2.hasCode()
+	}
+	
+
+}

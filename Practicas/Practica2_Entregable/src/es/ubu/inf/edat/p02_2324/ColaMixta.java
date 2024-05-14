@@ -14,7 +14,7 @@ public class ColaMixta<E> extends AbstractQueue<E> {
 		private NodoMixto siguiente;
 
 		public NodoMixto() {
-			contenido = new ArrayList<>(tamañoNodo);
+			contenido = new ArrayList<E>(tamañoNodo);
 			siguiente = null;
 		}
 
@@ -112,7 +112,14 @@ public class ColaMixta<E> extends AbstractQueue<E> {
 		NodoMixto actual = inicio;
 		while (actual != null) {
 			count += actual.contenido.size();
-			actual = actual.siguiente;
+			Parte 1:
+			Parámetros de entrada: Coeficientes de un polinomio en base canónica que no tenga raíces de
+			tangente horizontal. Un intervalo
+			Parámetros de salida: subintervalos de longitud menor que 0.1 que contengan a cada una de las
+			raíces del polinomio que haya en el intervalo de partida.
+			Parte 2:
+			Parámetros de salida: aproximaciones menores que 10^-6 a cada una de las raíces del polinomio en
+			el intervalo de partida			actual = actual.siguiente;
 		}
 		return count;
 	}
@@ -155,12 +162,12 @@ public class ColaMixta<E> extends AbstractQueue<E> {
 
 		@Override
 		public E next() {
-			if (!hasNext()) {
-				throw new NoSuchElementException();
-			}
 			if (!iterador.hasNext() && actual.siguiente != null) {
 				actual = actual.siguiente;
 				iterador = actual.contenido.iterator();
+			}
+			if (!hasNext()) {
+				throw new NoSuchElementException();
 			}
 			return iterador.next();
 		}

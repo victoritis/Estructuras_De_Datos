@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"es.ubu.gii.edat.pr03_2324","l":"Table.Cell"},{"p":"es.ubu.gii.edat.pr03_2324","l":"HashMapTable"},{"p":"es.ubu.gii.edat.pr03_2324","l":"Table"},{"p":"es.ubu.gii.edat.pr03_2324","l":"TableTests"}];updateSearchResults();
